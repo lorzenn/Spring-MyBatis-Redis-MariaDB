@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.time.LocalDateTime;
-
+/**
+ * This class is the Custom error message when an exception is displayed
+ */
 @Data
 public class CustomErrorResponse {
 
@@ -12,6 +14,5 @@ public class CustomErrorResponse {
     private LocalDateTime timestamp;
     private int status;
     private String error;
-    private String errorMessage;
 
 }

@@ -1,16 +1,20 @@
-package com.example.library.books;
+package com.example.library.books.mapper;
 
+import com.example.library.books.model.Book;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
+/**
+ * This class has the @Mapper annotation which is the one responsible for checking the database.
+ */
 @Mapper
 public interface BookMapper {
 
-    String SELECT_ALL_BOOKS = "select * from books";
+    String SELECT_ALL_BOOKS = "SELECT * FROM books";
     String SELECT_BOOKS_BY_ID = "SELECT * FROM books WHERE id = #{id}";
-    String CREATE_BOOK = "INSERT INTO books(id, name, author) VALUES(#{id}, #{name}, #{author})";
-    String UPDATE_BOOK_BY_ID = "UPDATE books set name=#{name}, author=#{author} where id=#{id}";
+    String CREATE_BOOK = "INSERT INTO books(id, name, author, email) VALUES(#{id}, #{name}, #{author}, #{email})";
+    String UPDATE_BOOK_BY_ID = "UPDATE books SET name=#{name}, author=#{author}, email=#{email} WHERE id=#{id}";
     String DELETE_BOOK_BY_ID = "DELETE FROM books WHERE id = #{id}";
 
     @Select(SELECT_ALL_BOOKS)

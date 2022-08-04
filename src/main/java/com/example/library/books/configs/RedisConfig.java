@@ -10,6 +10,10 @@ import org.springframework.data.redis.repository.configuration.EnableRedisReposi
 import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
+/**
+ * This class holds the RedisConfiguration
+ * Change the .setHostName and .setPort, depending on Redis Server configuration
+ */
 @Configuration
 @EnableRedisRepositories
 public class RedisConfig {
