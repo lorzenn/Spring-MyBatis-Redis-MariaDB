@@ -7,7 +7,7 @@ Techonologies Used:
 - Redis
 - MariaDB
 
- * @Endpoints
+ Endpoints
  * POST - localhost:8080/library/book
  * GET - localhost:8080/library/book AND localhost:8080/library/book/{id}
  * PUT - localhost:8080/library/book/{id}
